@@ -303,14 +303,9 @@ def main():
     #draw_targets(ax)
     draw_refs = draw_robot(ax)
     
-    if sim_config.dev_mode == 'noteable':        
-        plt.ion()
-        plt.draw()
-    elif sim_config.dev_mode == 'local':
-        pass
-    else:
-        raise BadArgumentError(f"{sim_config.dev_mode} is not a supported argument for sim_config.dev_mode")
-
+    plt.ion()
+    plt.draw()
+    
     ##### Setup server #####
     server_thread = Thread(target=start_server, daemon=True)
     server_thread.start()
@@ -333,6 +328,7 @@ def main():
 
         plt.draw()
         plt.pause(0.01)
+
 
 if __name__ == '__main__':
     main()

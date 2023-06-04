@@ -27,7 +27,7 @@ Step 3: Install the [RoboMaster SDK](https://robomaster-dev.readthedocs.io/en/la
 Step 4: Install the custom challenge SDK
 ```sh
 pip install -r requirements.txt  # install third-party dependencies
-pip install .  # install the SDK from source
+pip install .  # install the SDK from source. The '.' means install from current directory.
 ```
 
 Step 5: Install a python GUI backend.
@@ -72,12 +72,19 @@ Access the html docs at `docs/build/index.html`.
 ## Quickstart Example with Simulator
 
 Open a terminal, start the scoring server:
+
 `til-scoring config/scoring_cfg.yml -o teamName1`
 
 In another terminal, start the simulator:
+
 `til-simulator -c config/sim_cfg.yml`
 
 In another terminal, start your autonomy code:
-`python stubs/autonomy.py --config config/autonomy_cfg.yml`
+
+`python stubs/autonomy_starter.py --config config/autonomy_cfg.yml`
 
 Note: Remember to change the paths in the config files to your own directories.
+
+You can always use the `--help` option with these commands to view help messages. E.g.
+
+`til-scoring --help`
