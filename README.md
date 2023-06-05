@@ -11,26 +11,28 @@ the path planner and simulator.
 
 
 ## Setup
-Step 1: Clone this git repo.
+**Step 1: Clone this git repo.**
 
-It is highly recommended to install python dependencies in a virtual environment or a docker container.
+It is highly recommended to install python dependencies in a virtual environment.
 
-Step 2: Activate virtual environment.
+**Step 2: Activate virtual environment.**
 ```
 pip install virtualenv
 virtualenv -p python3.8.10 venv  # create virtual python environment with specific python version.
 source <NAME_OF_VENV>/bin/activate  # on Windows, "./<NAME_OF_VENV>/Scripts/activate" to activate virtual python environment.
 ```
 
-Step 3: Install the [RoboMaster SDK](https://robomaster-dev.readthedocs.io/en/latest/python_sdk/installs.html)
+**Step 3: Install the [RoboMaster SDK](https://robomaster-dev.readthedocs.io/en/latest/python_sdk/installs.html)**
 
-Step 4: Install the custom challenge SDK
+Note that the required python version for the RoboMaster SDK is between 3.6.6 and 3.8.10
+
+**Step 4: Install the custom challenge SDK**
 ```sh
 pip install -r requirements.txt  # install third-party dependencies
 pip install .  # install the SDK from source. The '.' means install from current directory.
 ```
 
-Step 5: Install a python GUI backend.
+**Step 5: Install a python GUI backend.**
 
 install a matplotlib backend to enable visualization of the simulation:
 ```
@@ -42,9 +44,7 @@ If the above doesn't work and you're on Ubuntu, try this GUI backend:
 sudo apt-get install python3-tk
 ```
 
-
-Step 6:
-Install any other dependencies your custom AI models require.
+**Step 6: (Optional) Install any other dependencies your custom AI models require.**
 
 For example, the sample AI models require these.
 ```
