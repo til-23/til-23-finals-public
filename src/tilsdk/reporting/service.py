@@ -200,7 +200,12 @@ class ReportingService:
                 pose_tup = eval(data)
                 return pose_tup
         elif response.status == 300:
-            return 'Not An Expected Checkpoint'
+            if data == 'Not An Expected Checkpoint':
+                return data
+            elif data == "You Still Have Checkpoints":
+                return data
+            else:
+                raise Exception(f"Unhandled Response. Response code: {response.status}.")
         else:
             raise Exception(f"Bad Response from server. Response code: {response.status}. " + 
                             f"Try checking that inputs are correct or that the server is up.")

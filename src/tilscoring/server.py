@@ -194,17 +194,20 @@ def get_check_pose():
         # if pose_counter > len(valid_pose):
         #     return 'Please exit the maze using the last location given',300
         
-        if euclidean_distance(pose, valid_pose[-1]) < config['local_thres']:
-            checkpoint_state = CheckpointState.VALID_CHECKPOINT
-            score=0
+        if euclidean_distance(pose, valid_pose[-1]) < config['local_thres']:  # near end goal.
+            if pose_counter < len(valid_pose - 1):
+                return "You Still Have Checkpoints", 300
+            else:
+                checkpoint_state = CheckpointState.VALID_CHECKPOINT
+                score=0
 
-            status_dict = {
-                'status':  'goal reached',
-                'time_elapsed': time_elapsed_s
-            }
-            announcer.announce(event='status update', data_dict=status_dict)
+                status_dict = {
+                    'status':  'goal reached',
+                    'time_elapsed': time_elapsed_s
+                }
+                announcer.announce(event='status update', data_dict=status_dict)
 
-            return 'End Goal Reached', 200
+                return 'End Goal Reached', 200
         elif euclidean_distance(pose, valid) < config['local_thres']:
             checkpoint_state = CheckpointState.VALID_CHECKPOINT
             
