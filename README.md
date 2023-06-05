@@ -2,13 +2,13 @@
 
 SDK, simulator and documentation for TIL 2023 Robotics Challenge.
 
-* ``src/``: SDK and simulator packages.
-* ``config/``: SDK and simulator sample configuration files.
-* ``data/``: sample audio and images for the AI tasks, sample maps used for
-the path planner and simulator.
-* ``docs/``: documentation and sphinx doc webpages source.
-* ``stubs/``: Code stubs for participants to implement.
-
+* ``src/``: SDK and simulator packages. YOU DO NOT NEED TO MODIFY THESE.
+* ``config/``: sample configuration files for the scoring server, simulator and sample autonomy code. 
+  You might want to copy these.
+* ``data/``: sample audio and images for the AI tasks, sample maps used for.
+  the path planner and simulator. Feel free to use these data samples.
+* ``docs/``: documentation and Sphinx docs source. Build these with the instructions below to view API docs.
+* ``stubs/``: Code stubs for participants to implement. It is recommended to develop your custom codes in this directory.
 
 ## Setup
 **Step 1: Clone this git repo.**
