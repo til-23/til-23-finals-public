@@ -200,6 +200,7 @@ class ReportingService:
                 pose_tup = eval(data)
                 return pose_tup
         elif response.status == 300:
+            data = response.data.decode('utf-8')
             if data == 'Not An Expected Checkpoint':
                 return data
             elif data == "You Still Have Checkpoints":
