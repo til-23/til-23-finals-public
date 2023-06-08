@@ -195,7 +195,7 @@ def get_check_pose():
         #     return 'Please exit the maze using the last location given',300
         
         if euclidean_distance(pose, valid_pose[-1]) < config['local_thres']:  # near end goal.
-            if pose_counter < len(valid_pose - 1):
+            if pose_counter < (len(valid_pose) - 1):
                 return "You Still Have Checkpoints", 300
             else:
                 checkpoint_state = CheckpointState.VALID_CHECKPOINT
