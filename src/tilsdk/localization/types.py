@@ -304,7 +304,7 @@ def real_to_grid(id:Union[RealLocation, RealPose], scale:float) -> Union[GridLoc
             Corresponding gird location/pose.
         '''
         if len(id) == 3:
-            return GridPose(int(np.round(id[0]/scale)), int(np.round(id[1])/scale), id[2])
+            return GridPose(int(np.round(id[0]/scale)), int(np.round(id[1]/scale)), id[2])
         return GridLocation(int(np.round(id[0]/scale)), int(np.round(id[1]/scale)))
 
 def real_to_grid_exact(id:RealLocation, scale:float) -> Tuple[float, float]:
