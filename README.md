@@ -87,7 +87,7 @@ In another terminal, start your autonomy code:
 
 `python stubs/autonomy_starter.py --config config/autonomy_cfg.yml`
 
-Note: Remember to change the paths in the config files to your own directories.
+Note: REMEMBER to CHANGE THE FILE/DIRECTORY PATHS in the config files (by default in the "config" folder) to your own directories.
 
 You can always use the `--help` option with these commands to view help messages. E.g.
 
