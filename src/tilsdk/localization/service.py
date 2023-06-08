@@ -25,7 +25,11 @@ class LocalizationService:
         logging.getLogger('Localization').info(f"Localization Service connecting to {self.url}.")
 
     def get_map(self) -> SignedDistanceGrid:
-        '''Get map as occupancy grid.
+        '''Get a grid-based representation of the of the map.
+        
+        Grid elements are square and represented by a float. Value indicates distance from nearest
+        obstacle. Value <= 0 indicates occupied, > 0 indicates passable.
+        Grid is centered-aligned, i.e. real-world postion maps to center of grid square.
         
         Returns
         -------
