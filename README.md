@@ -34,15 +34,16 @@ pip install .  # install the SDK from source. The '.' means install from current
 
 **Step 5: Install a python GUI backend.**
 
-install a matplotlib backend to enable visualization of the simulation:
+On Ubuntu, try this GUI backend:
 ```
-pip install pyqt5  # probably works for Linux as well.
+sudo apt-get install python3-tk  # If you are at our venue you don't need to do this (it is already installed).
 ```
 
-If the above doesn't work and you're on Ubuntu, try this GUI backend:
+or if you're on Windows
 ```
-sudo apt-get install python3-tk
+pip install pyqt5
 ```
+
 
 **Step 6: (Optional) Install any other dependencies your custom AI models require.**
 
