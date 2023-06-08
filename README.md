@@ -23,6 +23,9 @@ source <NAME_OF_VENV>/bin/activate  # on Windows, "./<NAME_OF_VENV>/Scripts/acti
 ```
 
 **Step 3: Install the [RoboMaster SDK](https://robomaster-dev.readthedocs.io/en/latest/python_sdk/installs.html)**
+```sh
+pip install robomaster
+```
 
 Note that the required python version for the RoboMaster SDK is between 3.6.6 and 3.8.10
 
