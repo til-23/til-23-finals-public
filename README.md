@@ -17,7 +17,7 @@ It is highly recommended to install python dependencies in a virtual environment
 
 **Step 2: Activate virtual environment.**
 ```
-pip install virtualenv
+pip install virtualenv  # you do not need to run this line if you are down at our physical venue.
 virtualenv -p python3.8.10 venv  # create virtual python environment with specific python version.
 source <NAME_OF_VENV>/bin/activate  # on Windows, "./<NAME_OF_VENV>/Scripts/activate" to activate virtual python environment.
 ```
