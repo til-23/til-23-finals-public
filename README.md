@@ -87,8 +87,22 @@ In another terminal, start your autonomy code:
 
 `python stubs/autonomy_starter.py --config config/autonomy_cfg.yml`
 
-Note: REMEMBER to CHANGE THE FILE/DIRECTORY PATHS in the config files (by default in the "config" folder) to your own directories.
+Note: REMEMBER to CHANGE THE FILE/DIRECTORY PATHS in the config files (by default in the "config" folder) to your own directories. And to modify the config files as necessary.
+
+You are free not to use any of the provided stubs or code, except for the tilsdk's ReportingService and LocalizationService, which are mandatory for you to interact with our challenge servers.
 
 You can always use the `--help` option with these commands to view help messages. E.g.
 
 `til-scoring --help`
+
+## Start developing
+
+To prevent your code from being overwritten by patches and code releases by the organizers, you should make your own copies of the config files in the `config/` directory. and also your own copy of the `stubs/autonomy_starter.py` if you intend on using the sample code.
+
+## Tips / Common Issues
+
+Make sure your source code points to all the correct file and directory paths.
+
+Ensure you are pointing your LocalizationService and ReportingService to the CORRECT IP addresses and port numbers where the servers are actually located.
+
+You are supposed to make various improvements to the autonomy code. You can think about improvements to the robot movements, the path-planning, or the usage of the path planner's output waypoints, or the management of noisy localization data, etc etc. 
