@@ -31,7 +31,7 @@ Note that the required python version for the RoboMaster SDK is between 3.6.6 an
 
 **Step 4: Install the custom challenge SDK**
 ```sh
-pip install -r requirements.txt  # install third-party dependencies
+pip install -r requirements.txt  # install third-party dependencies. use the provided requirements-win.txt if installing on Windows.
 pip install .  # install the SDK from source. The '.' means install from current directory.
 ```
 
