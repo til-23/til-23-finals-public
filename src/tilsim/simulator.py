@@ -64,7 +64,7 @@ def get_pose():
     global robot
 
     real_pose = robot.pose
-    pose = robot.noisy_pose if sim_config.use_noisy_pose else real_pose
+    pose = robot.noisy_pose if sim_config.use_noisy_pose and not sim_config.proxy_real_robot else real_pose
     clues = []
 
     for clue in sim_config.clues:
@@ -292,6 +292,7 @@ def main():
     global robot
     if sim_config.proxy_real_robot:
         robot = ActualRobot(LocalizationService(host=sim_config.proxy_host, port=sim_config.proxy_port))
+        sim_config.use_noisy_pose = False  # don't need simulator to simulate noise.
     else:
         robot = SimRobot(sim_config)
 

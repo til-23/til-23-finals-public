@@ -125,7 +125,7 @@ class ActualRobot:
         dt : float
             Time since last simulation step.
         '''
-        pose, _ = self.loc_service.get_pose()
+        pose = self.loc_service.get_pose()
         if pose:
             with self._pose_lock:
                 self._pose = np.array(pose)
