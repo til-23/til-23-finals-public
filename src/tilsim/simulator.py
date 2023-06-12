@@ -117,7 +117,6 @@ def get_camera():
     buf = img.tobytes()
     return buf, 200
 
-    #return np.zeros((1280, 720, 3), dtype=np.uint8).tobytes(), 200
 
 def start_server():
     global config
@@ -292,7 +291,6 @@ def main():
     global robot
     if sim_config.proxy_real_robot:
         robot = ActualRobot(LocalizationService(host=sim_config.proxy_host, port=sim_config.proxy_port))
-        sim_config.use_noisy_pose = False  # don't need simulator to simulate noise.
     else:
         robot = SimRobot(sim_config)
 
