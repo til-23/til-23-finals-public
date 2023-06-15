@@ -423,6 +423,25 @@ def post_report_digit():
 
     return str(location),200
 
+
+def validate(cfg: dict):
+    checkpoints = cfg['targets']
+    
+    for checkpoint, params in checkpoints.items():
+        print(f"checkpoint: {checkpoint}")
+        print(f"values: {params}\n")
+        
+        assert params['situation'] in ['suspect', 'hostage', 'none']
+        
+        # Check zip files exist.
+        assert os.path.exists(params['audio_path'])
+        assert zipfile.is_zipfile(params['audio_path'])
+        assert os.path.exists(params['digit_audio_path'])
+        assert zipfile.is_zipfile(params['digit_audio_path'])
+    print("passed assertions!")
+        
+    
+
 def main():
     global config, out_dir
 
@@ -458,6 +477,7 @@ def main():
 
     with open(args.config, 'r') as f:
         config = yaml.safe_load(f)
+        validate(config)
 
     app.run(args.host, args.port)
 
