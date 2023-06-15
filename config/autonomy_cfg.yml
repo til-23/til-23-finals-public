@@ -9,7 +9,7 @@ use_real_localization: false
 
 # radius in metres to consider robot as having reached a waypoint/goal. 
 # this should be set slightly lower than the server's `local_thres` param.
-REACHED_THRESHOLD_M : 0.2 
+REACHED_THRESHOLD_M : 0.1 
 
 # angle in degrees between robot's forward vector and heading of waypoint to
 # consider it as having reached the desired angle/heading.
@@ -40,3 +40,5 @@ CV_MODEL_DIR : ''
 REID_MODEL_DIR : ''
 
 SPEAKER_ID_MODEL_DIR : ''
+
+STUCK_THRESHOLD: 30
